@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Santa</title>
+</head>
+<body>
+    <h1>Welcome to the Secret Santa Generator!</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="participants">Enter participants (separate by commas):</label><br>
+        <input type="text" name="participants" id="participants" placeholder="John, Mary, etc." required><br><br>
+        <button type="submit">Generate Secret Santa</button>
+    </form>
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>

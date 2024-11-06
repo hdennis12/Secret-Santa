@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Santa Results</title>
+</head>
+<body>
+    <h1>Secret Santa Assignments</h1>
+    <ul>
+        {% for giver, receiver in pairs %}
+            <li>{{ giver }} → {{ receiver }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to the Home Page</a>
+</body>
+</html>
